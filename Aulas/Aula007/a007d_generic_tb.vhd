@@ -8,10 +8,10 @@ library ieee;
 use ieee.std_logic_1164.all; -- Importa a biblioteca padrão para tipos lógicos.
 use ieee.numeric_std.all;    -- Importa a biblioteca para operações com tipos numéricos como 'unsigned'.
 
-entity a16b_mux_generic_tb is
+entity a007d_generic_tb is
 end entity;
 
-architecture sim of a16b_mux_generic_tb is
+architecture sim of a007d_generic_tb is
     -- Constante 'n' define a largura das entradas e saída do mux.
     constant n   :  integer := 4; -- A largura dos dados deve ser maior que 4 para cobrir todas as entradas.
 
@@ -29,7 +29,7 @@ architecture sim of a16b_mux_generic_tb is
 
 begin
     -- Chamando o mux genérico configurado com o parâmetro 'n'.
-    dut_mux: entity work.a16a_mux(rtl) 
+    dut_mux: entity work.a007c_generic(rtl) 
         generic map(n)
         port map(sig0, sig1, sig2, sig3, sel, saida);
 
